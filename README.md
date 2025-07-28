@@ -3,24 +3,22 @@
 ### 🚫 No Bitly Account Needed
 
 Test a working Bitly integration without signing up for anything. No Bitly token, no developer key, no Salesforce login required.
-
-This project is hosted on a Salesforce Experience Cloud site, exposing the full functionality via a public-facing Screen Flow and Apex controller.
+This project is hosted on a Salesforce Experience Cloud site, exposing the full functionality via a public-facing site.
 
 ⸻
 
 ### 🌐 Live Demo
 
-### 👉 [Insert Experience Cloud Site URL]
-
-Paste any long URL into the flow, click submit, and get back a Bitly-shortened URL in seconds.
+### 👉 https://integration-experts-dev-ed.my.site.com/s/
+Enter any long URL into the ‘Survey URL’ field on the Contact record, click save, and instantly get back a Bitly-shortened link.
 
 ⸻
 
 ### 💡 What This Project Demonstrates
 	•	Calling an external API (Bitly) from Salesforce using Named Credentials
 	•	Exposing Apex functionality to guest Experience Cloud site users
-	•	A practical no-code front end using Screen Flow
-	•	API callouts and JSON parsing entirely in Apex
+	•	Handle API callouts and JSON parsing entirely in Apex
+	•	Automate URL shortening via Trigger and Queueable Apex
 
 ⸻
 
