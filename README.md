@@ -34,7 +34,6 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 ⸻
 ### 🧠 How It Works
-<<<<<<< update-read-me
 1. User creates a conttact and enters a long URL into the “Survey Link” field on the Contact record. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/e3d76af0-1547-493e-aedd-e4f9c3d79406" />
 2. A before-insert/update Apex Trigger invokes the ContactSurveyLinkHandler class. <img width="875" height="279" alt="2025-07-28_23-25-02" src="https://github.com/user-attachments/assets/244694e7-e935-4ff7-ac63-85975b7c0fed" />
 3. This handler:
