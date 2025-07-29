@@ -76,7 +76,7 @@ req.setHeader('Authorization', 'Bearer ' + getToken());
 req.setBody(JSON.serialize(new Map<String, String>{ 'long_url' => longUrl }));
 
 HttpResponse res = new Http().send(req);
-if (res.getStatusCode() == 200) {
+if (res.getStatusCode() == 200 || res.getStatusCode() == 201) {
     Map<String, Object> result = (Map<String, Object>)JSON.deserializeUntyped(res.getBody());
     return (String)result.get('link');
 }
