@@ -1,11 +1,24 @@
 ## 🔗 Salesforce Bitly URL Shortener (No-Setup Experience Cloud Demo)
 
-### 🚫 No Bitly Account Needed
+🎯 Project Purpose
 
-Test a working Bitly integration without signing up for anything. No Bitly token, no developer key, no Salesforce login required.
-This project is hosted on a Salesforce Experience Cloud site, exposing the full functionality via a public-facing site.
+The primary goal of this project is to automatically shorten long survey URLs saved on Salesforce Contact records. Often, survey links can be excessively long and unwieldy—making them hard to read, share, or embed. This integration solves that problem by:
+	•	Detecting when a long URL is saved to the Survey Link field
+	•	Calling the Bitly API to shorten the URL behind the scenes
+	•	Replacing the original link with a clean, shortened Bitly link—automatically and instantly
 
-⸻
+This ensures users and stakeholders always have access to short, shareable links.
+
+### 🚫 Bitly Account Optional
+
+You can test a working Bitly integration without signing up for anything—no Bitly token, no developer key, and no Salesforce login required.  
+This project is hosted on a Salesforce Experience Cloud site, exposing full functionality via a public-facing site.
+
+However, if you notice that a Bitly link was not generated (e.g., due to usage limits), you can:
+
+1. [Create a free Bitly account](https://bitly.com/pages/pricing)
+2. [Generate a Generic Access Token](https://dev.bitly.com/docs/getting-started/authentication/)
+3. Update the `Bitly_API_Access_Token__c` field on the Contact record with your token
 
 ### 🌐 Live Demo
 
@@ -26,9 +39,9 @@ Enter any long URL into the ‘Survey URL’ field on the Contact record, click 
 	1.	User enters a long URL into the “Survey Link” field on the Contact record.
 	2.	A before-insert/update Apex Trigger invokes the ContactSurveyLinkHandler class.
 	3.	This handler:
-	•	Calls the Bitly API v4 via a Queueable Apex class using a Named Credential
-	•	Passes the long URL in a POST request
-	•	Parses the shortened URL from Bitly’s JSON response
+		•	Calls the Bitly API v4 via a Queueable Apex class using a Named Credential
+		•	Passes the long URL in a POST request
+		•	Parses the shortened URL from Bitly’s JSON response
 	4.	The shortened URL is then automatically saved into the custom field "Survey Link" on the Contact.
 
 ⸻
