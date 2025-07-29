@@ -1,4 +1,4 @@
-## 🔗 Salesforce Bitly URL Shortener (No-Setup Experience Cloud Demo)
+## 🔗 Salesforce Bitly URL Shortener (Experience Cloud Demo)
 
 🎯 Project Purpose
 
@@ -18,37 +18,27 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 1. [Create a free Bitly account](https://bitly.com/pages/pricing)
 2. [Generate a Generic Access Token](https://dev.bitly.com/docs/getting-started/authentication/)
-3. Update the `Bitly_API_Access_Token__c` field on the Contact record with your token
+3. Create a new contact and update the `Bitly_API_Access_Token__c` field on the Contact record with your token
 
-### 🌐 Live Demo
-
-### 👉 https://integration-experts-dev-ed.my.site.com/s/
-• Enter any long URL into the ‘Survey URL’ field on the Contact record, click save, and instantly get back a Bitly-shortened link.
-
-⸻
-
-### 💡 What This Project Demonstrates
-	•	Calling an external API (Bitly) from Salesforce using Named Credentials
-	•	Exposing Apex functionality to guest Experience Cloud site users
-	•	Handle API callouts and JSON parsing entirely in Apex
-	•	Automate URL shortening via Trigger and Queueable Apex
+### 🌐 Live Environment
+• 👉 [Link to Experience Cloud Site](https://integration-experts-dev-ed.my.site.com/s/)
+• Enter any long URL into the ‘Survey URL’ field on the Contact record, click save, and instantly get back a Bitly-shortened link. You may need refresh <img width="26" height="24" alt="2025-07-28_23-41-57" src="https://github.com/user-attachments/assets/97c57235-ed97-432f-a065-68b2020c2890" /> the webpage.
 
 ⸻
 
-### 🧠 How It Works
-	1.	User enters a long URL into the “Survey Link” field on the Contact record. <img src="force-app/main/default/images/screenshot-of-survey-link-field.png" alt="Survey Link" width="600"/>
-	2.	A before-insert/update Apex Trigger invokes the ContactSurveyLinkHandler class.
-	3.	This handler:
-		•	Calls the Bitly API v4 via a Queueable Apex class using a Named Credential
-		•	Passes the long URL in a POST request
-		•	Parses the shortened URL from Bitly’s JSON response
-	4.	The shortened URL is then automatically saved into the custom field "Survey Link" on the Contact.
+💡 What This Project Demonstrates
+	• Calling an external API (Bitly) from Salesforce using Named Credentials. 
+	• Exposing Apex functionality to guest Experience Cloud site users
+	• Handle API callouts and JSON parsing entirely in Apex
+	• Automate URL shortening via Trigger and Queueable Apex
+
+⸻
 
 ⸻
 
 🔐 Token Security
-	•	Bitly token is stored securely using a Named Credential with a custom authorization header.
-	•	Public users never see the token, and no frontend exposure occurs.
+	• Bitly token is stored securely using a Named Credential with a custom authorization header.
+	• Public users never see the token, and no frontend exposure occurs.
 
 ⸻
 
@@ -76,7 +66,7 @@ req.setHeader('Authorization', 'Bearer ' + getToken());
 req.setBody(JSON.serialize(new Map<String, String>{ 'long_url' => longUrl }));
 
 HttpResponse res = new Http().send(req);
-if (res.getStatusCode() == 200) {
+if (res.getStatusCode() == 200 || res.getStatusCode() == 201) {
     Map<String, Object> result = (Map<String, Object>)JSON.deserializeUntyped(res.getBody());
     return (String)result.get('link');
 }
@@ -86,12 +76,12 @@ if (res.getStatusCode() == 200) {
 ⸻
 
 ### 🧪 Use Cases
-	•	Teaching aid for Salesforce API integrations
-	•	Portfolio piece for devs showing real-world Apex usage
-	•	Quick utility for shortening URLs in records like Contacts
+	• Teaching aid for Salesforce API integrations
+	• Portfolio piece for devs showing real-world Apex usage
+	• Quick utility for shortening URLs in records like Contacts
 
 ⸻
 
 ### 📘 Related Docs
-	•	[Bitly API Docs](https://dev.bitly.com/)
-	•	[Salesforce Named Credentials](https://help.salesforce.com/s/articleView?id=xcloud.named_credentials_about.htm&type=5)
+	• [Bitly API Docs](https://dev.bitly.com/)
+	• [Salesforce Named Credentials](https://help.salesforce.com/s/articleView?id=xcloud.named_credentials_about.htm&type=5)
