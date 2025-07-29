@@ -18,12 +18,12 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 1. [Create a free Bitly account](https://bitly.com/pages/pricing)
 2. [Generate a Generic Access Token](https://dev.bitly.com/docs/getting-started/authentication/)
-3. Update the `Bitly_API_Access_Token__c` field on the Contact record with your token
+3. Create a new contact and update the `Bitly_API_Access_Token__c` field on the Contact record with your token
 
-### 🌐 Live Demo
-
-### 👉 https://integration-experts-dev-ed.my.site.com/s/
-• Enter any long URL into the ‘Survey URL’ field on the Contact record, click save, and instantly get back a Bitly-shortened link.
+### 🌐 Live Environment
+👉 [Link to Experience Cloud Site](https://integration-experts-dev-ed.my.site.com/s/)
+• Enter any long URL into the ‘Survey URL’ field on the Contact record, click save, and instantly get back a Bitly-shortened link. YOu may need refresh <img width="26" height="24" alt="2025-07-28_23-41-57" src="https://github.com/user-attachments/assets/97c57235-ed97-432f-a065-68b2020c2890" />
+the webpage.
 
 ⸻
 
