@@ -27,8 +27,8 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 ⸻
 
-### 💡 What This Project Demonstrates
-	•	Calling an external API (Bitly) from Salesforce using Named Credentials. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/9aeebb37-4a2f-46f5-9056-4c0a71290c02" />
+💡 What This Project Demonstrates
+	• Calling an external API (Bitly) from Salesforce using Named Credentials. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/9aeebb37-4a2f-46f5-9056-4c0a71290c02" />
 
 	•	Exposing Apex functionality to guest Experience Cloud site users
 	•	Handle API callouts and JSON parsing entirely in Apex
