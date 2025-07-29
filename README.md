@@ -28,22 +28,22 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 ⸻
 
 💡 What This Project Demonstrates
-	• Calling an external API (Bitly) from Salesforce using Named Credentials. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/9aeebb37-4a2f-46f5-9056-4c0a71290c02" />
-
-	•	Exposing Apex functionality to guest Experience Cloud site users
-	•	Handle API callouts and JSON parsing entirely in Apex
-	•	Automate URL shortening via Trigger and Queueable Apex
+	• Calling an external API (Bitly) from Salesforce using Named Credentials. 
+	• Exposing Apex functionality to guest Experience Cloud site users
+	• Handle API callouts and JSON parsing entirely in Apex
+	• Automate URL shortening via Trigger and Queueable Apex
 
 ⸻
 
 ### 🧠 How It Works
-	1.	User enters a long URL into the “Survey Link” field on the Contact record. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/e3d76af0-1547-493e-aedd-e4f9c3d79406" />
-	2.	A before-insert/update Apex Trigger invokes the ContactSurveyLinkHandler class.
-	3.	This handler:
-		•	Calls the Bitly API v4 via a Queueable Apex class using a Named Credential
-		•	Passes the long URL in a POST request
-		•	Parses the shortened URL from Bitly’s JSON response
-	4.	The shortened URL is then automatically saved into the custom field "Survey Link" on the Contact.
+1. User enters a long URL into the “Survey Link” field on the Contact record. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/e3d76af0-1547-493e-aedd-e4f9c3d79406" />
+2. A before-insert/update Apex Trigger invokes the ContactSurveyLinkHandler class. <img width="875" height="279" alt="2025-07-28_23-25-02" src="https://github.com/user-attachments/assets/244694e7-e935-4ff7-ac63-85975b7c0fed" />
+3. This handler:
+	• Calls the Bitly API v4 via a Queueable Apex class using a Named Credential <img width="970" height="236" alt="2025-07-28_23-27-16" src="https://github.com/user-attachments/assets/8cd79c9e-8324-47c6-a9fd-8205dfa89404" />
+	• Passes the long URL in a POST request. <img width="983" height="336" alt="2025-07-28_23-28-45" src="https://github.com/user-attachments/assets/45d188e5-89cb-4d0b-a4c3-70af66e51e08" />
+	• Parses the shortened URL from Bitly’s JSON response. <img width="1254" height="299" alt="2025-07-28_23-31-25" src="https://github.com/user-attachments/assets/c0c298b8-b0fd-4038-95e1-87e6b10c6ce9" />
+	• The shortened URL is then automatically saved into the custom field "Survey Link" on the Contact. <img width="1727" height="536" alt="2025-07-28_23-33-10" src="https://github.com/user-attachments/assets/2b7d0e86-517d-49fc-8909-d65c5d1d77d5" />
+ 	• Errors returned by the Bitly API are recorded in the designated Bitly error logging fields. <img width="1727" height="536" alt="2025-07-28_23-33-10 (1)" src="https://github.com/user-attachments/assets/374f9f00-0562-4b84-a7ef-b6c4c30b97ae" />
 
 ⸻
 
