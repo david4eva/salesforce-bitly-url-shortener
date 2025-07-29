@@ -35,8 +35,10 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 ⸻
 
+https://raw.githubusercontent.com/dave4eva/salesforce-bitly-url-shortener/update.read-me/force-app/main/default/images/screenshot-of-
+
 ### 🧠 How It Works
-	1.	User enters a long URL into the “Survey Link” field on the Contact record. https://raw.githubusercontent.com/dave4eva/salesforce-bitly-url-shortener/update.read-me/force-app/main/default/images/screenshot-of-survey-link-field.png
+	1.	User enters a long URL into the “Survey Link” field on the Contact record. survey-link-field.png
 	2.	A before-insert/update Apex Trigger invokes the ContactSurveyLinkHandler class.
 	3.	This handler:
 		•	Calls the Bitly API v4 via a Queueable Apex class using a Named Credential
