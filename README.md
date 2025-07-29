@@ -27,6 +27,8 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 ⸻
 
+![Survey Link](https://raw.githubusercontent.com/your-username/your-repo/main/path/to/image.png)
+
 ### 💡 What This Project Demonstrates
 	•	Calling an external API (Bitly) from Salesforce using Named Credentials
 	•	Exposing Apex functionality to guest Experience Cloud site users
