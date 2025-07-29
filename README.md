@@ -83,13 +83,13 @@ if (res.getStatusCode() == 200 || res.getStatusCode() == 201) {
 
 ⸻
 
-### 🧪 Use Cases
+###🧪 Use Cases
 	• Teaching aid for Salesforce API integrations
 	• Portfolio piece for devs showing real-world Apex usage
 	• Quick utility for shortening URLs in records like Contacts
 
 ⸻
 
-### 📘 Related Docs
+###📘 Related Docs
 	• [Bitly API Docs](https://dev.bitly.com/)
 	• [Salesforce Named Credentials](https://help.salesforce.com/s/articleView?id=xcloud.named_credentials_about.htm&type=5)
