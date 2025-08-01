@@ -22,7 +22,7 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 ### 🌐 Live Environment
 • 👉 [Link to Experience Cloud Site](https://integration-experts-dev-ed.my.site.com/s/)
-• Enter any long URL into the ‘Survey URL’ field on the Contact record, click save, and instantly get back a Bitly-shortened link. You may need refresh <img width="26" height="24" alt="2025-07-28_23-41-57" src="https://github.com/user-attachments/assets/97c57235-ed97-432f-a065-68b2020c2890" /> the webpage.
+• Enter any long URL into the ‘Survey URL’ field on the Contact record, click save, and instantly get back a Bitly-shortened link. You may need to refresh <img width="26" height="24" alt="2025-07-28_23-41-57" src="https://github.com/user-attachments/assets/97c57235-ed97-432f-a065-68b2020c2890" /> the record page.
 
 ⸻
 
@@ -34,7 +34,7 @@ However, if you notice that a Bitly link was not generated (e.g., due to usage l
 
 ⸻
 ### 🧠 How It Works
-1. User creates a conttact and enters a long URL into the “Survey Link” field on the Contact record. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/e3d76af0-1547-493e-aedd-e4f9c3d79406" />
+1. User creates a contact and enters a long URL into the “Survey Link” field on the Contact record. <img width="1141" height="570" alt="2025-07-28_22-39-17" src="https://github.com/user-attachments/assets/e3d76af0-1547-493e-aedd-e4f9c3d79406" />
 2. A before-insert/update Apex Trigger invokes the ContactSurveyLinkHandler class. <img width="875" height="279" alt="2025-07-28_23-25-02" src="https://github.com/user-attachments/assets/244694e7-e935-4ff7-ac63-85975b7c0fed" />
 3. This handler:
 	• Calls the Bitly API v4 via a Queueable Apex class using a Named Credential <img width="970" height="236" alt="2025-07-28_23-27-16" src="https://github.com/user-attachments/assets/8cd79c9e-8324-47c6-a9fd-8205dfa89404" />
